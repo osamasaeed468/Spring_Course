@@ -8,10 +8,20 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <context:annotation-config />
+
     <!--    this is our beans -->
 <!--    Implementation LifeCycle using XML-->
     <bean class="com.springcore.LifeCycle.Samosa" name="samosa" init-method="init" destroy-method="destroy">
         <property name="price" value="10" />
+    </bean>
+<!--    implementing life cycle using Interface-->
+    <bean class="com.springcore.LifeCycle.Pepsi" name="pepsi">
+        <property name="price" value="5" />
+    </bean>
+    <!--    implementing life cycle using Annotations-->
+    <bean class="com.springcore.LifeCycle.Subject" name="subject">
+        <property name="name" value="Maths"/>
     </bean>
 
 </beans>
