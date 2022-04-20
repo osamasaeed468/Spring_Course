@@ -11,5 +11,8 @@ public class Test {
         Employee employee1 =(Employee) context.getBean("employee1");
         System.out.println(employee1);
 
+        // phone list ---> class ---> name
+        System.out.println(employee1.getPhones().getClass().getName());
+
     }
 }
