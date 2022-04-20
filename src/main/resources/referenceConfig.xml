@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    this is our bean -->
+<!-- Aref is dependent on Bref-->
+    <bean class="com.springcore.reference.B" name="Bref">
+        <property name="y" value="80" />
+    </bean>
+
+    <bean class="com.springcore.reference.A" name="Aref">
+        <property name="x" value="12"/>
+<!--        getting reference from B class which object(ob) is created in A class-->
+        <property name="obj" ref="Bref" />
+
+    </bean>
+
+
+</beans>

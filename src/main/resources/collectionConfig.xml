@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--    this is our bean -->
+
+    <bean class="com.springcore.collections.Employee" name="employee1">
+        <property name="name" value="osama"/>
+        <property name="phones">
+            <list>
+                <value>03214857456</value>
+                <value>03145456145</value>
+                <value>03579245505</value>
+            </list>
+        </property>
+        <property name="addresses">
+            <set>
+                <value>lahore</value>
+                <value>karachi</value>
+                <value>multan</value>
+            </set>
+        </property>
+        <property name="courses">
+            <map>
+                <entry key="java" value = "2 month" />
+                <entry key="javascript" value = "1.5 month" />
+                <entry key="react" value = "2 month" />
+            </map>
+        </property>
+        <property name="props">
+            <props>
+                <prop key="name">osama</prop>
+                <prop key="status">programmer</prop>
+            </props>
+        </property>
+
+    </bean>
+
+
+</beans>
